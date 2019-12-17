@@ -5,7 +5,7 @@
 \linespread{1.07}
 \usepackage{graphicx}
 \usepackage{hyperref}
-
+\usepackage{tikz-cd}
 \title{Derived -- Data -- Derived}
 \author{}
 
@@ -35,7 +35,7 @@ There was analysis \cite{ANALYSIS}, which was about trying to make our naive fee
 \cite{MANDELBROT}. So to deal with this at least for a little, we introduced the derivative, an abstraction of the deviation, inherent to the infinitely small region around the point in question. Its inspiration was the mechanical notion of speed.
 
 \begin{center}
-\includegraphics[scale=0.05]{Tangent_to_a_curve.jpg}
+\includegraphics[scale=0.045]{Tangent_to_a_curve.jpg}
 
 \textit{The derivative represented via the notion of tangent line: the line that one can draw through a couple of points ``ultra-close'' to each other. Image from \cite{DERIVATIVE}.}
 \end{center}
@@ -47,7 +47,7 @@ So, in the chaos of real number variety, we derived, and understood something. B
 From drawing triangles on the surface of our planet, to understanding the shape of the planet, and then pehaps of the space-time itself, that was the process from which we learned geometry and topology, the abstraction of the notion of a space. We were not happy to just study single spaces anymore, we started to understand relations between them: how a spiral can be viewed as an infinte covering of a circle, how having holes in a donut corresponds to tracing paths in it, or formally, mapping circles into it \cite{HATCHER}.
 
 \begin{center}
-\includegraphics[scale=0.8]{UniversalCoveringOfCircle}
+\includegraphics[scale=0.7]{UniversalCoveringOfCircle}
 
 \textit{The spiral of real numbers can be mapped onto a circle by the means of projecting each point vertically. This allows to better understand various mathematical properties of the circle. Taken from \cite{NLABCIRC}.}
 \end{center}
@@ -72,12 +72,26 @@ The devil is in the details. Knowing all relations to all objects may be an impo
 
 We went even further. We now have categories, and ways to relate them. Meaning categories themselves become objects of the category of categories, with functors as relations. We called such a 2-category. Are there many 2-categories? Yes. Can one define relations between them? Yes. Can one continue, into 3, 4, 5, infinity categories? Yes \cite{BAEZ, NLABINFTY}.
 
+\begin{center}
+\begin{tikzcd}
+  A \arrow[r, bend left, "f", ""{name=U,inner sep=1pt,below}]
+  \arrow[r, bend right, "g"{below}, ""{name=D,inner sep=1pt}]
+  & B
+  \arrow[Rightarrow, from=U, to=D, "\alpha"]
+\end{tikzcd}
+
+\smallskip
+
+\textit{In the $2$-category above, relations $f,g$ between $A$ and $B$ turn out to be objects themselves, related by a ``two-relation'' (``two-morphism'') $\alpha$.}
+\end{center}
+
+
 And along this way, one will notice that what we dealt with before had infinity-categories within them all the way.
 
 If one unpacks what it means to be an $n$-category, one discovers that our line of thought naturally came with the understanding that relations are in fact themselves objects. Are not they after all? Consider a space that you can visualise. Take its points as objects, draw paths between them, call them relations. But there can be many paths from point A to point B. But some of them can be related, for example if you never had to pass through a ‘hole’ in your space if you intuitively deformed one path to another.
 
 \begin{center}
-\includegraphics[scale=0.12]{paths}
+\includegraphics[scale=0.11]{paths}
 
 \textit{If you forgive me this simple drawing, here is an illustration. One deform one upper path into the other along the beige lines, but we cannot deform any of them into the bottom path without passing through the black region.}
 \end{center}
@@ -89,7 +103,7 @@ How did we not get lost in such a disaster? The feeling that a non-specialist ge
 This is where we can return back to the rest of our life. Mathematics (relatively ancient compared to the stories of above) powers a lot of it already, as it done since the millenia of history \cite{CHILDE}. Physics also stressed the importance of interactions rather than objects themselves in the quantum theory of fields \cite{WEINBERG}. So, where are we now? Are these ideas I mention finding their way into economy? One has a computer boom after all, with all the recent momentum of artificial intelligence, data analysis and online platforms. They often rely on mathematics that is dozens if not centuries of years old, the one that we learned to explain to the computer. But as we speak at this very moment, we are learning how to explain more and more of it to the machines, and use some fairly recent mathematics to analyze data. The AI that we have now may seem mathematically unappealing at first, but it is very effective for how simple it is (it can already probably make it through a complicated calculus course \cite{LAMPCHART}). Some other people, including the author, are trying to explain simple category theory to the neural networks or make capable proof assistants \cite{HOTT}. And the attempts to make progress on “deriving” the current AI in the form of General AI are underway.
 
 \begin{center}
-\includegraphics[scale=0.5]{noisy_circle_simplexes_and_persistent_homology.png}
+\includegraphics[scale=0.52]{noisy_circle_simplexes_and_persistent_homology.png}
 
 \textit{An application of algebraic topology to study data, known as persistent homology. Image taken from \cite{BUNCH}}.
 \end{center}
